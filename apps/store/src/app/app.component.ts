@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
-import { getAllGames } from '../fake-api';
-import {formatRating} from "../../../../libs/store/util-formatters/src/lib/store-util-formatters";
+import {Component, OnInit} from '@angular/core';
+import {formatRating} from "@bg-hoard/store/util-formatters";
+import {HttpClient} from "@angular/common/http";
+import {Observable, of} from "rxjs";
+import {Game} from "@bg-hoard/data-model/interfaces";
 
 @Component({
   selector: 'bg-hoard-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-   title = 'Board Game Hoard';
+export class AppComponent implements OnInit {
+  title = 'Board Game Hoard';
   formatRating = formatRating;
-  games = getAllGames();
+  games$: Observable<Game[]> = of([])
+
+  constructor(private httpClient: HttpClient) {
+
+  }
+
+  ngOnInit() {
+    this.httpClient.get<Game[]>('/api').subscribe((res) => {
+      console.log(res);
+    })
+    this.games$ = this.httpClient.get<Game[]>('/api');
+  }
 }

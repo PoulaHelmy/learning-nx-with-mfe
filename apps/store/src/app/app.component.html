@@ -3,7 +3,7 @@
   <div class="games-layout">
     <mat-card class="game-card"
               [routerLink]="['/game', game.id]"
-              *ngFor="let game of games">
+              *ngFor="let game of games$ | async">
       <mat-card-header class="center-content">
         <mat-card-title>{{ game.name }}</mat-card-title>
       </mat-card-header>

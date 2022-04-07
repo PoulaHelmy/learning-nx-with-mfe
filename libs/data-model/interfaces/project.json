@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/data-model/interfaces",
+  "sourceRoot": "libs/data-model/interfaces/src",
+  "prefix": "bg-hoard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/data-model/interfaces"],
+      "options": {
+        "jestConfig": "libs/data-model/interfaces/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/data-model/interfaces/src/**/*.ts",
+          "libs/data-model/interfaces/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
