@@ -2,7 +2,6 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "backend-api": "apps/backend-api",
     "data-model-interfaces": "libs/data-model/interfaces",
     "store": "apps/store",
     "store-e2e": "apps/store-e2e",

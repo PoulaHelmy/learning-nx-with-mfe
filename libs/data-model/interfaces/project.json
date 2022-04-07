@@ -6,7 +6,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/data-model/interfaces"],
+      "outputs": [
+        "coverage/libs/data-model/interfaces"
+      ],
       "options": {
         "jestConfig": "libs/data-model/interfaces/jest.config.js",
         "passWithNoTests": true
@@ -22,5 +24,8 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    "scope:shared",
+    "type:util"
+  ]
 }
