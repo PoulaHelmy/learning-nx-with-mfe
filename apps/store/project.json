@@ -4,6 +4,16 @@
   "sourceRoot": "apps/store/src",
   "prefix": "bg-hoard",
   "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "echo 'your app has been deployed!'"
+          }
+        ]
+      }
+    },
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
@@ -15,7 +25,10 @@
         "tsConfig": "apps/store/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/store/src/favicon.ico", "apps/store/src/assets"],
-        "styles": ["apps/store/src/styles.scss"],
+        "styles": [
+          "apps/store/src/styles.scss",
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+        ],
         "scripts": []
       },
       "configurations": {

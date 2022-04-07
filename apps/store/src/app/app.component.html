@@ -1,6 +1,9 @@
+<bg-hoard-header title="Board Game Hoard"></bg-hoard-header>
 <div class="container">
   <div class="games-layout">
-    <mat-card class="game-card" *ngFor="let game of games">
+    <mat-card class="game-card"
+              [routerLink]="['/game', game.id]"
+              *ngFor="let game of games">
       <mat-card-header class="center-content">
         <mat-card-title>{{ game.name }}</mat-card-title>
       </mat-card-header>
@@ -14,9 +17,10 @@
           {{ game.description }}
         </p>
         <span>
-          <span style="font-weight: bold;">Rating:</span> {{ game.rating }}
+          <span style="font-weight: bold;">Rating:</span> {{formatRating(game.rating) }}
         </span>
       </mat-card-content>
     </mat-card>
   </div>
+  <router-outlet></router-outlet>
 </div>

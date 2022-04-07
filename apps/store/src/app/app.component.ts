@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { getAllGames } from '../index';
+import { getAllGames } from '../fake-api';
+import {formatRating} from "../../../../libs/store/util-formatters/src/lib/store-util-formatters";
 
 @Component({
   selector: 'bg-hoard-root',
@@ -8,5 +9,6 @@ import { getAllGames } from '../index';
 })
 export class AppComponent {
    title = 'Board Game Hoard';
+  formatRating = formatRating;
   games = getAllGames();
 }
