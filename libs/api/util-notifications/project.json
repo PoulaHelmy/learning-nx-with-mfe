@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/api/util-notifications",
+  "sourceRoot": "libs/api/util-notifications/src",
+  "prefix": "bg-hoard",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/util-notifications"],
+      "options": {
+        "jestConfig": "libs/api/util-notifications/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/api/util-notifications/src/**/*.ts",
+          "libs/api/util-notifications/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
