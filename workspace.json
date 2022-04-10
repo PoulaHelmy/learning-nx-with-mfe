@@ -12,6 +12,8 @@
     "store-feature-game-detail": "libs/store/feature-game-detail",
     "store-ui-shared": "libs/store/ui-shared",
     "store-ui-shared-e2e": "apps/store-ui-shared-e2e",
-    "store-util-formatters": "libs/store/util-formatters"
+    "store-util-formatters": "libs/store/util-formatters",
+    "todo": "apps/todo",
+    "todo-e2e": "apps/todo-e2e"
   }
 }
