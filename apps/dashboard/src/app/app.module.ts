@@ -1,9 +1,9 @@
-import { AppComponent } from './app.component';
-import { AuthGuard } from 'libs/shared/auth/src';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterModule } from '@angular/router';
+import {AppComponent} from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {NxWelcomeComponent} from './nx-welcome.component';
+import {RouterModule} from '@angular/router';
+import {AuthGuard} from "@bg-hoard/shared/auth/auth.guard";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -43,10 +43,11 @@ import { RouterModule } from '@angular/router';
         //     import('login/Module').then((m) => m.RemoteEntryModule),
         // },
       ],
-      { initialNavigation: 'enabledBlocking' }
+      {initialNavigation: 'enabledBlocking'}
     ),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

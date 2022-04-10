@@ -1,8 +1,8 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
-import { AuthService } from 'libs/shared/auth/src';
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from "@bg-hoard/shared/auth/auth.service";
 
 @Component({
   selector: 'bg-hoard-login',
@@ -14,11 +14,14 @@ export class LoginComponent {
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
-  constructor(private authService: AuthService, private router: Router) {}
+
+  constructor(private authService: AuthService, private router: Router) {
+  }
+
   login() {
     const username = this.loginForm.get('username')?.value;
     const password = this.loginForm.get('password')?.value;
-    const loggedIn = this.authService.login({ username, password });
+    const loggedIn = this.authService.login({username, password});
     if (loggedIn) {
       this.router.navigateByUrl('/');
     }

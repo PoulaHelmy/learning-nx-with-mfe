@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'bg-hoard-login-entry',
-  template: `<bg-hoard-login></bg-hoard-login>`,
+  templateUrl: './remote.component.html',
   styles: [
     `
       .remote-entry {
@@ -13,4 +13,5 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class RemoteEntryComponent {}
+export class RemoteEntryComponent {
+}

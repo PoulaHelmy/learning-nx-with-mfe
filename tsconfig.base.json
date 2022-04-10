@@ -10,7 +10,10 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -21,17 +24,28 @@
       "@bg-hoard/data-model/interfaces": [
         "libs/data-model/interfaces/src/index.ts"
       ],
-      "@bg-hoard/feat-login": ["libs/feat-login/src/index.ts"],
-      "@bg-hoard/shared/auth": ["libs/shared/auth/src/index.ts"],
-      "@bg-hoard/shared/util-dates": ["libs/shared/util-dates/src/index.ts"],
+      "@bg-hoard/feat-login/*": [
+        "libs/feat-login/src/lib/*"
+      ],
+      "@bg-hoard/shared/auth/*": [
+        "libs/shared/auth/src/lib/*"
+      ],
+      "@bg-hoard/shared/util-dates": [
+        "libs/shared/util-dates/src/index.ts"
+      ],
       "@bg-hoard/store/feature-game-detail": [
         "libs/store/feature-game-detail/src/index.ts"
       ],
-      "@bg-hoard/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
+      "@bg-hoard/store/ui-shared": [
+        "libs/store/ui-shared/src/index.ts"
+      ],
       "@bg-hoard/store/util-formatters": [
         "libs/store/util-formatters/src/index.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
