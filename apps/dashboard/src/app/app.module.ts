@@ -23,7 +23,6 @@ import {AuthGuard} from "@bg-hoard/shared/auth/auth.guard";
               path: 'todo',
               loadChildren: () =>
                 import('todo/Module').then((m) => m.RemoteEntryModule),
-              canActivate: [AuthGuard],
             },
             {
               path: 'login',
