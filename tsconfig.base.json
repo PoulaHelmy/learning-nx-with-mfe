@@ -21,6 +21,8 @@
       "@bg-hoard/data-model/interfaces": [
         "libs/data-model/interfaces/src/index.ts"
       ],
+      "@bg-hoard/feat-login": ["libs/feat-login/src/index.ts"],
+      "@bg-hoard/shared/auth": ["libs/shared/auth/src/index.ts"],
       "@bg-hoard/shared/util-dates": ["libs/shared/util-dates/src/index.ts"],
       "@bg-hoard/store/feature-game-detail": [
         "libs/store/feature-game-detail/src/index.ts"

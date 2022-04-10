@@ -16,6 +16,11 @@ import { RouterModule } from '@angular/router';
           loadChildren: () =>
             import('todo/Module').then((m) => m.RemoteEntryModule),
         },
+        {
+          path: 'login',
+          loadChildren: () =>
+            import('login/Module').then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
