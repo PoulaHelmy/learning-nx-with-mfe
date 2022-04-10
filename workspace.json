@@ -3,6 +3,8 @@
   "projects": {
     "api": "apps/api",
     "api-util-notifications": "libs/api/util-notifications",
+    "dashboard": "apps/dashboard",
+    "dashboard-e2e": "apps/dashboard-e2e",
     "data-model-interfaces": "libs/data-model/interfaces",
     "shared-util-dates": "libs/shared/util-dates",
     "store": "apps/store",
